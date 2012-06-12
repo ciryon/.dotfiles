@@ -1,0 +1,27 @@
+[color]
+	ui = auto
+[include]
+	path = .secretgitconfig
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log --pretty='format:%Cblue%h%d%C(yellow) %s %Cgreen%an%Creset, %ar' --graph
+    who = shortlog -s --
+    rediff = diff master..origin/master --name-status
+    conflicts = !git ls-files -u | cut -f 2 | sort -u
+  diff = diff --no-ext-diff
+  vdiff = diff
+[gui]
+	fontui = -family Helvetica -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Monaco -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+[core]
+	excludesfile = /Users/ciryon/.gitignore_global
+      ;edior = /Applications/MacVim.app/Contents/MacOS/Vim
+      editor = vim
+[web]
+  browser = open
+
+

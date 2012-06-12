@@ -1,0 +1,76 @@
+" Editor setup
+colorscheme xoria256
+
+" Whitespace stuff
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set listchars=tab:▸\ ,eol:¬
+set list!
+
+" Status bar
+set laststatus=2
+set statusline=%t\ %h%m%r%y\ %{fugitive#statusline()}\ %=%c,%l/%L\ %P
+
+" CTags
+"map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+map <F2> :tprevious<CR>
+map <F4> :tnext<CR>
+let tlist_objc_settings = 'ObjectiveC;P:protocols;i:interfaces;types(...)'
+nmap <F3> :exec("tag ".expand("<cword>"))<CR>
+
+" function to loop through a specified path and include each tag file
+if has('python')
+function! BuildTagsFromPath()
+python << EOF
+import os
+import vim
+
+tags = ''
+tagpath = "%s/%s" % (os.environ['HOME'], '.vimtags')
+
+if (os.path.exists(tagpath)):
+    for file in os.listdir(tagpath):
+        if (file != 'README'):
+            tags += "%s/%s," % (tagpath, file)
+
+cmdsettags = "set tags=%s" % tags
+vim.command(cmdsettags)
+EOF
+endfunction
+
+call BuildTagsFromPath()
+endif
+
+" Curly brackets
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
+"Sessions
+map <F9> :mksession! ~/vim_session <cr> " Quick write session with F9
+map <F10> :source ~/vim_session <cr>     " And load session with F10
+
+
+"autocmd FileType javascript set makeprg=xbuild.sh
+
+" Building
+autocmd FileType objc set makeprg=xbuild.sh
+autocmd FileType ruby set makeprg=python\ %
+autocmd FileType ruby map <d-r> :!ruby %<CR>
+"autocmd FileType objc map <d-r> :!xcoderun.sh iphone<CR> <bar> :Tail /tmp/iossim-output<CR>
+"autocmd FileType objc map <d-R> :!xcoderun.sh ipad<CR> <bar> :Tail /tmp/iossim-output<CR>
+autocmd FileType objc map <d-r> :!xcoderun.sh iphone<CR> <CR>
+autocmd FileType objc map <d-R> :!xcoderun.sh ipad<CR> <CR>
+map <Leader>m :mak<CR>
+map <Leader>g :!git status<CR>
+
+" Help (search google for current word and I'm feeling lucky)
+"
+map <F1> :!open "http://www.google.com/search?q=<cword>&btnI=3564"<CR><CR>
+
+
+let g:clang_user_options='-fblocks -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300' 
