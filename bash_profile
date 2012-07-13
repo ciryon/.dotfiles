@@ -32,6 +32,7 @@ alias r='rails'
 alias subs='echo "Recursively updating Git submodules..."; git submodule update --init --recursive'
 alias pico=vim
 alias vim='mvim -v'
+alias derived_data_wipe='rm -rf ~/Library/Developer/Xcode/DerivedData/*'
 
 # Set the number of open files to be 1024
 ulimit -S -n 1024
@@ -90,4 +91,7 @@ if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 
 # And a Fortune!
-fortune -s aynrand
+#fortune -s aynrand
+
+# Load any additional stuff that may be local or should not be shared to the public
+if [[ -s ~/.localbash_profile ]] ; then source ~/.localbash_profile ; fi
