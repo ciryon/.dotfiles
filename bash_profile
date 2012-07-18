@@ -24,7 +24,6 @@ alias ra='cd ~/Documents/Coding/Ruby\ on\ Rails'
 alias ja='cd ~/Documents/Coding/Java'
 alias ru='cd ~/Documents/Coding/Ruby'
 alias t='~/Documents/Coding/Scripts/OCUnit2JUnit/ocunit2junit_console.rb'
-alias dircolors='gdircolors'
 alias yesterday='~/Documents/Coding/Scripts/yesterday.rb'
 alias grep='grep --color=auto'
 alias serve='python -m SimpleHTTPServer 8000'
@@ -84,14 +83,10 @@ fi
 proml
 
 # Do some dir colors
-eval `dircolors ~/.dir_colors`
+if [[ -s /usr/local/bin/gdircolors ]] ; then eval `gdircolors ~/.dir_colors` ; fi
 
 # Ruby versioning
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
-
-
-# And a Fortune!
-#fortune -s aynrand
 
 # Load any additional stuff that may be local or should not be shared to the public
 if [[ -s ~/.localbash_profile ]] ; then source ~/.localbash_profile ; fi

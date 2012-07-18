@@ -10,9 +10,32 @@ set expandtab
 set listchars=tab:▸\ ,eol:¬
 set list!
 
+let s:prevcountcache=[[], 0]
+function! ShowCount()
+    let key=[@/, b:changedtick]
+    if s:prevcountcache[0]==#key
+        return s:prevcountcache[1]
+    endif
+    let s:prevcountcache[0]=key
+    let s:prevcountcache[1]=0
+    let pos=getpos('.')
+    try
+        redir => subscount
+        silent %s///gne
+        redir END
+        let result=matchstr(subscount, '\d\+')
+        let s:prevcountcache[1]=result
+        return result
+    finally
+        call setpos('.', pos)
+    endtry
+endfunction
+set ruler
+
+
 " Status bar
 set laststatus=2
-set statusline=%t\ %h%m%r%y\ %{fugitive#statusline()}\ %=%c,%l/%L\ %P
+set statusline=%t\ %h%m%r%y\ %{fugitive#statusline()}\ %{ShowCount()}\ %=%c,%l/%L\ %P
 
 " CTags
 "map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
