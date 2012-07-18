@@ -20,5 +20,11 @@ map <M-Left> :bp!<CR>
 map <D-S-RIGHT> :tabNext<CR>
 map <D-S-LEFT> :tabprevious<CR>
 
+" Allow cmd-shift-J to "reveal in NERDtree", just like in Xcode
+map <d-J> :NERDTreeFind<CR>
+
+" Stop Buffergator from annoyingly resize windows
+let g:buffergator_autoexpand_on_split = 0
+
 map <d-O> :!open %<CR><CR>
 map <Leader>s :!xcoderun.sh iphone AcceptanceTests<CR> <bar> :Tail /tmp/iossim-output<CR>
