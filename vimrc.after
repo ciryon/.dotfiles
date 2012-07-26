@@ -87,6 +87,7 @@ autocmd FileType objc map <d-R> :!xcoderun.sh ipad<CR> <CR>
 map <Leader>m :mak<CR>
 map <Leader>g :!git status<CR>
 
+
 " Help (search google for current word and I'm feeling lucky)
 "
 map <F1> :!open "http://www.google.com/search?q=<cword>&btnI=3564"<CR><CR>

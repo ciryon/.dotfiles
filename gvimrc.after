@@ -27,4 +27,5 @@ map <d-J> :NERDTreeFind<CR>
 let g:buffergator_autoexpand_on_split = 0
 
 map <d-O> :!open %<CR><CR>
-map <Leader>s :!xcoderun.sh iphone AcceptanceTests<CR> <bar> :Tail /tmp/iossim-output<CR>
+"map <Leader>s :!xcoderun.sh iphone AcceptanceTests<CR> <bar> :Tail /tmp/iossim-output<CR>
+map <d-u> :!tests.sh<CR>
