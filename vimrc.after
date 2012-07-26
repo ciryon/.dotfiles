@@ -74,18 +74,14 @@ inoremap {{     {
 inoremap {}     {}
 
 "Sessions
+set sessionoptions-=options
 map <F9> :mksession! ~/vim_session <cr> " Quick write session with F9
 map <F10> :source ~/vim_session <cr>     " And load session with F10
-
-
-"autocmd FileType javascript set makeprg=xbuild.sh
 
 " Building
 autocmd FileType objc set makeprg=xbuild.sh
 autocmd FileType ruby set makeprg=python\ %
 autocmd FileType ruby map <d-r> :!ruby %<CR>
-"autocmd FileType objc map <d-r> :!xcoderun.sh iphone<CR> <bar> :Tail /tmp/iossim-output<CR>
-"autocmd FileType objc map <d-R> :!xcoderun.sh ipad<CR> <bar> :Tail /tmp/iossim-output<CR>
 autocmd FileType objc map <d-r> :!xcoderun.sh iphone<CR> <CR>
 autocmd FileType objc map <d-R> :!xcoderun.sh ipad<CR> <CR>
 map <Leader>m :mak<CR>
@@ -96,4 +92,15 @@ map <Leader>g :!git status<CR>
 map <F1> :!open "http://www.google.com/search?q=<cword>&btnI=3564"<CR><CR>
 
 
+" Options for clang (obj-c development)
 let g:clang_user_options='-fblocks -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300' 
+
+" Masochist mode - disable arrow keys:
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
