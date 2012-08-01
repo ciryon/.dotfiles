@@ -4,6 +4,7 @@ To make a clean install:
 
 * Install XCode
 * Install XCode command line tools
+* Install X11 from http://xquartz.macosforge.org/landing/
 * Install rvm and Ruby
 * Install HomeBrew
 * Install git
