@@ -1,0 +1,84 @@
+[submodule "vim_plugins/Vomodoro"]
+	path = vim_plugins/Vomodoro
+	url = https://github.com/gregsexton/Vomodoro.git
+[submodule "vim_plugins/vim-fugitive"]
+	path = vim_plugins/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim_plugins/vim-rbenv"]
+	path = vim_plugins/vim-rbenv
+	url = https://github.com/tpope/vim-rbenv
+[submodule "vim_plugins/vim-colors-solarized"]
+	path = vim_plugins/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "vim_plugins/vim-colorschemes"]
+	path = vim_plugins/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes
+[submodule "vim_plugins/vim-airline"]
+	path = vim_plugins/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule "vim_plugins/ctrlp.vim"]
+	path = vim_plugins/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "vim_plugins/tabular"]
+	path = vim_plugins/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "vim_plugins/nerdtree"]
+	path = vim_plugins/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim_plugins/supertab"]
+	path = vim_plugins/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "vim_plugins/vim-surround"]
+	path = vim_plugins/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "vim_plugins/nerdcommenter"]
+	path = vim_plugins/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule "vim_plugins/ack.vim"]
+	path = vim_plugins/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "vim_plugins/vim-addon-mw-utils"]
+	path = vim_plugins/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils
+[submodule "vim_plugins/tlib_vim"]
+	path = vim_plugins/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+[submodule "vim_plugins/snipmate-snippets"]
+	path = vim_plugins/snipmate-snippets
+	url = https://github.com/scrooloose/snipmate-snippets
+[submodule "vim_plugins/vim-snipmate"]
+	path = vim_plugins/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate
+[submodule "vim_plugins/vim-snipmate-ruby-snippets"]
+	path = vim_plugins/vim-snipmate-ruby-snippets
+	url = https://github.com/kaichen/vim-snipmate-ruby-snippets
+[submodule "vim_plugins/css-snippets-snipmate"]
+	path = vim_plugins/css-snippets-snipmate
+	url = https://github.com/tisho/css-snippets-snipmate
+[submodule "vim_plugins/vim-dispatch"]
+	path = vim_plugins/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "vim_plugins/vim-javascript"]
+	path = vim_plugins/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "vim_plugins/vim-rails"]
+	path = vim_plugins/vim-rails
+	url = https://github.com/tpope/vim-rails
+[submodule "vim_plugins/vim-rake"]
+	path = vim_plugins/vim-rake
+	url = https://github.com/tpope/vim-rake
+[submodule "vim_plugins/vim-rspec"]
+	path = vim_plugins/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec
+[submodule "vim_plugins/vim-haml"]
+	path = vim_plugins/vim-haml
+	url = https://github.com/tpope/vim-haml
+[submodule "vim_plugins/vim-css-color"]
+	path = vim_plugins/vim-css-color
+	url = https://github.com/skammer/vim-css-color
+[submodule "vim_plugins/vim-less"]
+	path = vim_plugins/vim-less
+	url = https://github.com/genoma/vim-less
+[submodule "vim_plugins/vim-mustache-handlebars"]
+	path = vim_plugins/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars

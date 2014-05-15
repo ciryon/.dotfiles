@@ -1,5 +1,5 @@
 "set guifont=Monaco:h13
-set guifont=Menlo:h13
+set guifont=Menlo:h14
 set lines=100
 set columns=160
 set guioptions-=T  "remove toolbar=
@@ -29,3 +29,6 @@ let g:buffergator_autoexpand_on_split = 0
 map <d-O> :!open %<CR><CR>
 "map <Leader>s :!xcoderun.sh iphone AcceptanceTests<CR> <bar> :Tail /tmp/iossim-output<CR>
 map <d-u> :!tests.sh<CR>
+
+" Disable some built-in shortcuts
+macm File.New\ Tab key=<nop>

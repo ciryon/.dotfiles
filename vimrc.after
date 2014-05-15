@@ -2,6 +2,7 @@
 " TODO: Split this file up into seperate files.
 "
 let mapleader=","
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 set nocompatible               " be iMproved
 execute pathogen#infect()
@@ -93,7 +94,7 @@ endif
 
 " Specific settings if GUI is running
 if has('gui_running')
-    if filereadable(expand("~/.gvimrc.local"))
+    if filereadable(expand("~/.gvimrc"))
         source ~/.gvimrc
     endif
 endif
