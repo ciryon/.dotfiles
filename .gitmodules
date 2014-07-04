@@ -82,3 +82,9 @@
 [submodule "vim_plugins/vim-mustache-handlebars"]
 	path = vim_plugins/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars
+[submodule "vim_plugins/codeschool-vim-theme"]
+	path = vim_plugins/codeschool-vim-theme
+	url = https://github.com/29decibel/codeschool-vim-theme.git
+[submodule "vim_plugins/vim-ruby-interpolation"]
+	path = vim_plugins/vim-ruby-interpolation
+	url = https://github.com/p0deje/vim-ruby-interpolation.git

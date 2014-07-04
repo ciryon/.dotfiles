@@ -7,7 +7,8 @@ set guioptions-=T  "remove toolbar=
 "color baycomb
 "color pyte "quite white and bright
 "color ir_black "nice dark and full of contrast
-color mayansmoke
+"color mayansmoke
+color codeschool
 set transparency=0
 
 :set autowrite
@@ -23,12 +24,10 @@ map <D-S-LEFT> :tabprevious<CR>
 " Allow cmd-shift-J to "reveal in NERDtree", just like in Xcode
 map <d-J> :NERDTreeFind<CR>
 
-" Stop Buffergator from annoyingly resize windows
-let g:buffergator_autoexpand_on_split = 0
+" Allow cmd-shift-J to "reveal in NERDtree", just like in Xcode
+map <d-F> :Ack 
+"
 
-map <d-O> :!open %<CR><CR>
-"map <Leader>s :!xcoderun.sh iphone AcceptanceTests<CR> <bar> :Tail /tmp/iossim-output<CR>
-map <d-u> :!tests.sh<CR>
 
 " Disable some built-in shortcuts
 macm File.New\ Tab key=<nop>
