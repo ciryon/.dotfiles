@@ -7,20 +7,25 @@ require 'erb'
 
 desc "install the dot files into user's home directory"
 task :install do
-  install_janus
-  customize_janus
+  install_pathogen
+  install_vim_modules
   link_dotfiles
 end
 
-def install_janus
-  puts "Installing janus..."
-  system %Q{ curl -Lo- https://bit.ly/janus-bootstrap | bash }
+desc "update vim modules"
+task :update_vim_modules do
+  system %Q{ git submodule update --init --recursive }
 end
 
-def customize_janus
+def install_pathogen
+  system %Q{ mkdir -p ~/.vim/autoload }
+  system %Q{ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim }
+end
+
+def install_vim_modules
   puts "Installing custom plugins for Vim"
-  system %Q{ git clone https://github.com/ciryon/.janus.git ~/.janus }
-  system %Q{ cd ~/.janus; git submodule update --init --recursive }
+  system %Q{ git submodule update --init --recursive }
+  system %Q{ ln -s ~/.dotfiles/vim_plugins ~/.vim/bundle }
 end
 
 def link_dotfiles
