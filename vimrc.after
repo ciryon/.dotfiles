@@ -21,6 +21,9 @@ map <Leader>n :NERDTreeToggle<CR>
 set hlsearch " highlight searches
 set incsearch "search while typing
 
+" Encoding
+set encoding=utf-8
+
 " Whitespace stuff
 set nolist " No list characters
 set nowrap
