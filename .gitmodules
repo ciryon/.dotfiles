@@ -88,3 +88,6 @@
 [submodule "vim_plugins/vim-ruby-interpolation"]
 	path = vim_plugins/vim-ruby-interpolation
 	url = https://github.com/p0deje/vim-ruby-interpolation.git
+[submodule "vim_plugins/vim-coffee-script"]
+	path = vim_plugins/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script
