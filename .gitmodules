@@ -43,18 +43,6 @@
 [submodule "vim_plugins/tlib_vim"]
 	path = vim_plugins/tlib_vim
 	url = https://github.com/tomtom/tlib_vim
-[submodule "vim_plugins/snipmate-snippets"]
-	path = vim_plugins/snipmate-snippets
-	url = https://github.com/scrooloose/snipmate-snippets
-[submodule "vim_plugins/vim-snipmate"]
-	path = vim_plugins/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate
-[submodule "vim_plugins/vim-snipmate-ruby-snippets"]
-	path = vim_plugins/vim-snipmate-ruby-snippets
-	url = https://github.com/kaichen/vim-snipmate-ruby-snippets
-[submodule "vim_plugins/css-snippets-snipmate"]
-	path = vim_plugins/css-snippets-snipmate
-	url = https://github.com/tisho/css-snippets-snipmate
 [submodule "vim_plugins/vim-dispatch"]
 	path = vim_plugins/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch
