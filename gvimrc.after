@@ -1,15 +1,16 @@
-"set guifont=Monaco:h13
-set guifont=Menlo:h14
+" Good fixed width font from Adobe
+set guifont=Source\ Code\ Pro:h13
 set lines=100
 set columns=160
 set guioptions-=T  "remove toolbar=
+
+" Just keeping a bunch of nice colors schemes here for reference
 "color kellys
 "color baycomb
 "color pyte "quite white and bright
 "color ir_black "nice dark and full of contrast
 "color mayansmoke
 color codeschool
-set transparency=0
 
 :set autowrite
 
@@ -28,6 +29,5 @@ map <d-J> :NERDTreeFind<CR>
 map <d-F> :Ack 
 "
 
-
-" Disable some built-in shortcuts
-macm File.New\ Tab key=<nop>
+" Launch in full screen
+au GUIEnter * simalt ~x
