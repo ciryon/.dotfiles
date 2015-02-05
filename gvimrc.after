@@ -30,4 +30,9 @@ map <d-F> :Ack
 "
 
 " Launch in full screen
-au GUIEnter * simalt ~x
+if has("win32")
+  au GUIEnter * simalt ~x
+end
+
+" Show line numbers
+set number
