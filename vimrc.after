@@ -98,15 +98,6 @@ endif
 "	source ~/.vimrc.bundles.local
 "endif
 
-
-
-" Specific settings if GUI is running
-if has('gui_running')
-    if filereadable(expand("~/.gvimrc"))
-        source ~/.gvimrc
-    endif
-endif
-
 map <d-t> :CtrlP<CR>
 
 " Snipmate
