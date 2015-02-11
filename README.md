@@ -5,7 +5,7 @@
 * Install Cmder
 * Install Visual Studio
 * Install Vim from https://bitbucket.org/Haroogan/vim-for-windows
-* git clone https://github.com/ciryon/.dotfiles ~/.dotfiles
+* git clone ssh://github.com/ciryon/.dotfiles ~/.dotfiles
 * Run setup.bat in .dotfiles\win\
 
 
@@ -18,7 +18,7 @@
 * Install HomeBrew
 * Install git
 * Install MacVim
-* git clone https://github.com/ciryon/.dotfiles ~/.dotfiles
+* git clone ssh://github.com/ciryon/.dotfiles ~/.dotfiles
 * cd ~/.dotfiles; rake (this is probably broken right now)
 
 
