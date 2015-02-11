@@ -29,10 +29,12 @@ map <d-J> :NERDTreeFind<CR>
 map <d-F> :Ack 
 "
 
-" Launch in full screen
+" Windows specific options
 if has("win32")
   au GUIEnter * simalt ~x
+  source ~/.dotfiles/win/mswin.vim "Enables stuff like ctrl-c to copy
 end
 
 " Show line numbers
 set number
+
