@@ -1,7 +1,16 @@
 *Notes to self*
 
-To make a clean install:
+## Windows 8/10
+* Install Chocolately
+* Install Cmder
+* Install Visual Studio
+* Install Vim from https://bitbucket.org/Haroogan/vim-for-windows
+* git clone https://github.com/ciryon/.dotfiles ~/.dotfiles
+* Run setup.bat in .dotfiles\win\
 
+
+
+## Mac OS X
 * Install XCode
 * Install XCode command line tools
 * Install X11 from http://xquartz.macosforge.org/landing/
@@ -10,6 +19,6 @@ To make a clean install:
 * Install git
 * Install MacVim
 * git clone https://github.com/ciryon/.dotfiles ~/.dotfiles
-* cd ~/.dotfiles; rake
+* cd ~/.dotfiles; rake (this is probably broken right now)
 
 
