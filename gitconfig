@@ -18,8 +18,6 @@
 	fontui = -family Helvetica -size 14 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Monaco -size 11 -weight normal -slant roman -underline 0 -overstrike 0
 [core]
-	excludesfile = /Users/ciryon/.gitignore_global
-      ;edior = /Applications/MacVim.app/Contents/MacOS/Vim
       editor = vim
 [web]
   browser = open
