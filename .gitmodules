@@ -19,9 +19,6 @@
 [submodule "vim_plugins/tabular"]
 	path = vim_plugins/tabular
 	url = https://github.com/godlygeek/tabular
-[submodule "vim_plugins/nerdtree"]
-	path = vim_plugins/nerdtree
-	url = https://github.com/scrooloose/nerdtree
 [submodule "vim_plugins/supertab"]
 	path = vim_plugins/supertab
 	url = https://github.com/ervandew/supertab
