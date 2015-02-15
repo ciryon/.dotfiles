@@ -51,3 +51,5 @@
 @doskey be=bundle exec $*
 @doskey which=where $*
 @doskey co=cd %HOME%/Documents/Coding
+@doskey date=ruby -e 'puts Time.now'
+

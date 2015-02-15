@@ -76,3 +76,9 @@
 [submodule "vim_plugins/ultisnips"]
 	path = vim_plugins/ultisnips
 	url = https://github.com/SirVer/ultisnips
+[submodule "vim_plugins\\unite.vim"]
+	path = vim_plugins\\unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "vim_plugins\\vimfiler.vim"]
+	path = vim_plugins\\vimfiler.vim
+	url = https://github.com/Shougo/vimfiler.vim.git

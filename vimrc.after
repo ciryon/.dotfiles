@@ -15,13 +15,15 @@ set t_Co=256
 colorscheme github
 
 
-" CtrlP for fuzzy finding files"
-map <Leader>t :CtrlP<CR>
+" Unite for fuzzy finding files"
+map <Leader>t :Unite file<CR>i
+map <Leader>b :Unite buffer<CR>
 
-" NERDTree 
-map <Leader>n :NERDTreeToggle<CR>
+" VimFiler 
+let g:vimfiler_as_default_explorer = 1 " Load by default instead of netrw
+map <Leader>n :VimFilerExplorer<CR>
 map <Leader>j :NERDTreeFind<CR>
-"let g:NERDTreeDirArrows=0 " No arrows
+let g:vimfiler_tree_closed_icon=">"
 
 " Searching
 set hlsearch " highlight searches
@@ -42,7 +44,7 @@ set shiftwidth=2                " use indents of 4 spaces
 set expandtab                   " tabs are spaces, not tabs
 set tabpagemax=15               " only show 15 tabs
 set nocursorline " No cursor line, thanks
-set nonumber
+set number
 set showmode                    " display the current mode
 
 " Curly brackets
@@ -66,7 +68,6 @@ autocmd FileType ruby map <C-R> :!ruby %<CR>
 autocmd FileType java map <C-R> :!javac %; !java %:r<CR>
 map <Leader>m :mak<CR>
 map <Leader>g :!git status<CR>
-map <Leader>b :CtrlPBuffer<CR>
 
 
 

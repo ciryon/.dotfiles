@@ -3,6 +3,7 @@ set guifont=Source\ Code\ Pro:h13
 set lines=100
 set columns=160
 set guioptions-=T  "remove toolbar=
+set guioptions-=m  "remove menubar=
 
 " Just keeping a bunch of nice colors schemes here for reference
 "color kellys
@@ -12,19 +13,6 @@ set guioptions-=T  "remove toolbar=
 "color mayansmoke
 color codeschool
 
-:set autowrite
-
-" Switch beteen buffers with alt-left/right
-map <M-Right> :bn!<CR>
-map <M-Left> :bp!<CR>
-
-" Switch between tabs with cms-shift-left/right
-map <D-S-RIGHT> :tabNext<CR>
-map <D-S-LEFT> :tabprevious<CR>
-
-" Quick find/ack
-map <d-F> :Ack 
-"
 
 " Windows specific options
 if has("win32")
@@ -32,6 +20,4 @@ if has("win32")
   source ~/.dotfiles/win/mswin.vim "Enables stuff like ctrl-c to copy
 end
 
-" Show line numbers
-set number
 
