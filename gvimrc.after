@@ -22,10 +22,7 @@ map <M-Left> :bp!<CR>
 map <D-S-RIGHT> :tabNext<CR>
 map <D-S-LEFT> :tabprevious<CR>
 
-" Allow cmd-shift-J to "reveal in NERDtree", just like in Xcode
-map <d-J> :NERDTreeFind<CR>
-
-" Allow cmd-shift-J to "reveal in NERDtree", just like in Xcode
+" Quick find/ack
 map <d-F> :Ack 
 "
 
