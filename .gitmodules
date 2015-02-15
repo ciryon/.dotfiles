@@ -16,9 +16,6 @@
 [submodule "vim_plugins/vim-airline"]
 	path = vim_plugins/vim-airline
 	url = https://github.com/bling/vim-airline
-[submodule "vim_plugins/ctrlp.vim"]
-	path = vim_plugins/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
 [submodule "vim_plugins/tabular"]
 	path = vim_plugins/tabular
 	url = https://github.com/godlygeek/tabular
