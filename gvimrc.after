@@ -9,9 +9,9 @@ set guioptions-=m  "remove menubar=
 "color kellys
 "color baycomb
 "color pyte "quite white and bright
-"color ir_black "nice dark and full of contrast
+color ir_black "nice dark and full of contrast
 "color mayansmoke
-color codeschool
+"color codeschool
 
 
 " Windows specific options
