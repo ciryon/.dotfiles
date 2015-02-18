@@ -18,6 +18,7 @@ color ir_black "nice dark and full of contrast
 if has("win32")
   au GUIEnter * simalt ~x
   source ~/.dotfiles/win/mswin.vim "Enables stuff like ctrl-c to copy
+  set keymodel-=stopsel " Allows arrows to extend visual selection
 end
 
 

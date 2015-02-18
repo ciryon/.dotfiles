@@ -14,7 +14,7 @@ colorscheme adam
 
 
 " Unite for fuzzy finding files"
-map <Leader>t :Unite file<CR>i
+map <Leader>t :Unite file<CR>i**/
 map <Leader>b :Unite buffer<CR>
 
 " VimFiler 
@@ -70,6 +70,7 @@ autocmd FileType ruby map <C-R> :!ruby %<CR>
 autocmd FileType java map <C-R> :!javac %; !java %:r<CR>
 map <Leader>m :mak<CR>
 map <Leader>g :!git status<CR>
+map <Leader>p :PomodoroToDoToday<CR>
 
 
 
