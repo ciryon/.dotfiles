@@ -47,6 +47,7 @@
 :: For some reason this aliases file can't be, uh, aliased (symlinked)
 :: So I'll just add some aliases using doskey, right here:
 @doskey g=git $*
+@doskey gf=git flow $*
 @doskey r=rails $*
 @doskey be=bundle exec $*
 @doskey which=where $*
