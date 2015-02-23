@@ -14,9 +14,9 @@ colorscheme adam
 
 
 " Unite for fuzzy finding files"
-map <Leader>t :Unite file/async<CR>i
+map <Leader>t :Unite file_rec/async<CR>i
 map <Leader>b :Unite buffer<CR>
-let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -g ""'
+let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -i -g ""'
 
 " VimFiler 
 map <Leader>n :VimFilerExplorer<CR>
