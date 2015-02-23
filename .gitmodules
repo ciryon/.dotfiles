@@ -82,3 +82,6 @@
 [submodule "vim_plugins\\vimfiler.vim"]
 	path = vim_plugins\\vimfiler.vim
 	url = https://github.com/Shougo/vimfiler.vim.git
+[submodule "vim_plugins\\vimproc.vim"]
+	path = vim_plugins\\vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
