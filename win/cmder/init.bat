@@ -53,4 +53,6 @@
 @doskey which=where $*
 @doskey co=cd %HOME%/Documents/Coding
 @doskey date=ruby -e 'puts Time.now'
+@doskey ~=cd %homepath%
+@doskey reboot=shutdown -r
 
