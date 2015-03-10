@@ -85,3 +85,6 @@
 [submodule "vim_plugins\\vimproc.vim"]
 	path = vim_plugins\\vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "vim_plugins\\vim-jsx"]
+	path = vim_plugins\\vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
