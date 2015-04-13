@@ -54,5 +54,6 @@
 @doskey co=cd %HOME%/Documents/Coding
 @doskey date=ruby -e 'puts Time.now'
 @doskey ~=cd %homepath%
-@doskey reboot=shutdown -r
+@doskey far= "c:\Program Files\Far Manager\Far.exe" $*
+@doskey reboot=@powershell -c (New-Object Media.SoundPlayer "C:\Users\Christian\OneDrive\Music\Ljudfiler\Effects\bye-bye-1.wav").PlaySync(); shutdown -r
 
