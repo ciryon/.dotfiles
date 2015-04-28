@@ -29,7 +29,7 @@
 
 :: Enhance Path
 @set git_install_root=%CMDER_ROOT%\vendor\msysgit
-@set PATH=%CMDER_ROOT%\bin;%git_install_root%\bin;%git_install_root%\mingw\bin;%git_install_root%\cmd;%CMDER_ROOT%;%PATH%
+@set PATH=C:\tools\vim;%CMDER_ROOT%\bin;%git_install_root%\bin;%git_install_root%\mingw\bin;%git_install_root%\cmd;%CMDER_ROOT%;%PATH%
 
 :: Set home path
 @if not defined HOME set HOME=%USERPROFILE%

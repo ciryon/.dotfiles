@@ -76,15 +76,15 @@
 [submodule "vim_plugins/ultisnips"]
 	path = vim_plugins/ultisnips
 	url = https://github.com/SirVer/ultisnips
-[submodule "vim_plugins\\unite.vim"]
-	path = vim_plugins\\unite.vim
+[submodule "vim_plugins/unite.vim"]
+	path = vim_plugins/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
-[submodule "vim_plugins\\vimfiler.vim"]
-	path = vim_plugins\\vimfiler.vim
+[submodule "vim_plugins/vimfiler.vim"]
+	path = vim_plugins/vimfiler.vim
 	url = https://github.com/Shougo/vimfiler.vim.git
-[submodule "vim_plugins\\vimproc.vim"]
-	path = vim_plugins\\vimproc.vim
+[submodule "vim_plugins/vimproc.vim"]
+	path = vim_plugins/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
-[submodule "vim_plugins\\vim-jsx"]
-	path = vim_plugins\\vim-jsx
+[submodule "vim_plugins/vim-jsx"]
+	path = vim_plugins/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
