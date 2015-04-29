@@ -8,6 +8,7 @@ filetype plugin indent on
 filetype on
 set fileformat=unix
 set fileformats=unix,dos
+set backspace=2 " Backspace works with deleting newlines etc
 "set nobinary
 
 " Color
@@ -16,19 +17,47 @@ set background=dark
 colorscheme adam
 
 
-" Unite for fuzzy finding files"
-map <Leader>t :Unite file_rec/async<CR>i
-map <Leader>b :Unite buffer<CR>
-let g:unite_source_rec_async_command= 'ag --nocolor --nogroup --hidden -i -g ""'
+" CtrlP for fuzzy finding files"
+map <Leader>t :CtrlP<CR>
+map <Leader>b :CtrlPBufTag<CR>
+"let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      "\ --ignore .git
+      "\ --ignore .svn
+      "\ --ignore .hg
+      "\ --ignore .DS_Store
+      "\ --ignore "**/*.pyc"
+      "\ -g ""'
 
-" VimFiler 
-map <Leader>n :VimFilerExplorer<CR>
-map <Leader>j :VimFilerBufferDir<CR>
-let g:vimfiler_as_default_explorer = 1 " Load by default instead of netrw
-let g:vimfiler_safe_mode_by_default = 0 " Allow operations, like rename
-let g:vimfiler_tree_closed_icon=">"
-let g:vimfiler_tree_opened_icon=""
+" Netrw 
+" Toggle Vexplore with Ctrl-E
+function! ToggleVExplorer()
+  if exists("t:expl_buf_num")
+    let expl_win_num = bufwinnr(t:expl_buf_num)
+    if expl_win_num != -1
+      let cur_win_nr = winnr()
+      exec expl_win_num . 'wincmd w'
+      close
+      exec cur_win_nr . 'wincmd w'
+      unlet t:expl_buf_num
+    else
+      unlet t:expl_buf_num
+    endif
+  else
+    exec '1wincmd w'
+    Vexplore
+    let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+map <silent> <Leader>n :call ToggleVExplorer()<CR>
+map <Leader>j :Sex<CR>
+let g:netrw_liststyle=3
+" Hit enter in the file browser to open the selected
+" file with :vsplit to the right of the browser.
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
 
+" Change directory to the current buffer when opening files.
+set autochdir
 
 
 " Searching

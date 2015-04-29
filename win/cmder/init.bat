@@ -51,6 +51,7 @@
 @doskey r=rails $*
 @doskey be=bundle exec $*
 @doskey which=where $*
+@doskey open=explorer $*
 @doskey co=cd %HOME%/Documents/Coding
 @doskey date=ruby -e 'puts Time.now'
 @doskey ~=cd %homepath%
