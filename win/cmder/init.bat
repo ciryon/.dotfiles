@@ -57,4 +57,5 @@
 @doskey ~=cd %homepath%
 @doskey far= "c:\Program Files\Far Manager\Far.exe" $*
 @doskey reboot=@powershell -c (New-Object Media.SoundPlayer "C:\Users\Christian\OneDrive\Music\Ljudfiler\Effects\bye-bye-1.wav").PlaySync(); shutdown -r
+@doskey subs=git submodule update --init --recursive
 
