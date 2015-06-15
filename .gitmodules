@@ -85,3 +85,6 @@
 [submodule "vim_plugins/vim-cjsx"]
 	path = vim_plugins/vim-cjsx
 	url = https://github.com/mtscout6/vim-cjsx.git
+[submodule "vim_plugins/ag.vim"]
+	path = vim_plugins/ag.vim
+	url = https://github.com/rking/ag.vim.git

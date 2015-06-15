@@ -19,7 +19,7 @@ colorscheme adam
 
 " CtrlP for fuzzy finding files"
 map <Leader>t :CtrlP<CR>
-map <Leader>b :CtrlPBufTag<CR>
+map <Leader>b :CtrlPBuffer<CR>
 "let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       "\ --ignore .git
       "\ --ignore .svn
@@ -55,6 +55,7 @@ let g:netrw_liststyle=3
 " file with :vsplit to the right of the browser.
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
+let g:netrw_banner=0 " Hide the help/info banner
 
 
 " Searching
@@ -102,6 +103,7 @@ autocmd FileType java map <C-R> :VimProcBang javac %; VimProcBang java %:r<CR>
 map <Leader>m :mak<CR>
 map <Leader>g :!git status<CR>
 map <Leader>p :PomodoroToDoToday<CR>
+map <Leader>f :Ag 
 
 
 
