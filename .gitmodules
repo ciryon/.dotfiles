@@ -88,3 +88,6 @@
 [submodule "vim_plugins/ag.vim"]
 	path = vim_plugins/ag.vim
 	url = https://github.com/rking/ag.vim.git
+[submodule "vim_plugins/nerdtree"]
+	path = vim_plugins/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
