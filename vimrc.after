@@ -77,9 +77,8 @@ nmap <buffer> <silent> <F1> :exec 'silent !open "'. escape('http://www.google.co
 autocmd Filetype java set makeprg=javac\ %
 autocmd FileType python set makeprg=python\ %
 autocmd FileType ruby set makeprg=ruby\ %
-autocmd FileType javascript map <C-R> :VimProcBang node %<CR>
-autocmd FileType ruby map <C-R> :VimProcBang ruby %<CR>
-autocmd FileType java map <C-R> :VimProcBang javac %; VimProcBang java %:r<CR>
+autocmd FileType javascript map <C-R> :! node %<CR>
+autocmd FileType ruby map <C-R> :! ruby %<CR>
 map <Leader>m :mak<CR>
 map <Leader>g :!git status<CR>
 map <Leader>p :PomodoroToDoToday<CR>
