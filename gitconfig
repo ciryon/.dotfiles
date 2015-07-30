@@ -22,9 +22,5 @@
 [web]
   browser = open
 
-
-[user]
-	email = christianhedin@outlook.com
-	name = Christian Hedin
 [push]
-	default = simple
+	default = matching
