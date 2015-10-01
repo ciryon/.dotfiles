@@ -91,3 +91,6 @@
 [submodule "vim_plugins/nerdtree"]
 	path = vim_plugins/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim_plugins/vim-jst"]
+	path = vim_plugins/vim-jst
+	url = https://github.com/briancollins/vim-jst.git
