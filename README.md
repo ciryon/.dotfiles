@@ -12,13 +12,11 @@
 
 ## Mac OS X
 * Install XCode
-* Install XCode command line tools
-* Install X11 from http://xquartz.macosforge.org/landing/
-* Install rvm and Ruby
+* Install XCode command line tools, xcode-select --install
 * Install HomeBrew
-* Install git
+* Install git and git-flow
 * Install MacVim
 * git clone ssh://github.com/ciryon/.dotfiles ~/.dotfiles
-* cd ~/.dotfiles; rake (this is probably broken right now)
+* cd ~/.dotfiles; rake
 
 

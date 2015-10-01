@@ -12,8 +12,10 @@
     who = shortlog -s --
     rediff = diff master..origin/master --name-status
     conflicts = !git ls-files -u | cut -f 2 | sort -u
-  diff = diff --no-ext-diff
+  diff = vimdiff
   vdiff = diff
+[merge]
+      tool = opendiff
 [gui]
 	fontui = -family Helvetica -size 14 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Monaco -size 11 -weight normal -slant roman -underline 0 -overstrike 0
