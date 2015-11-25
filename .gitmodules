@@ -94,3 +94,6 @@
 [submodule "vim_plugins/vim-jst"]
 	path = vim_plugins/vim-jst
 	url = https://github.com/briancollins/vim-jst.git
+[submodule "vim_plugins/swift.vim"]
+	path = vim_plugins/swift.vim
+	url = https://github.com/keith/swift.vim.git
