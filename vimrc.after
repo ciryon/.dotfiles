@@ -80,10 +80,17 @@ autocmd FileType ruby set makeprg=ruby\ %
 autocmd FileType javascript map <C-R> :! node %<CR>
 autocmd FileType ruby map <C-R> :! ruby %<CR>
 map <Leader>m :mak<CR>
+map <Leader>r :mak<CR>
 map <Leader>g :!git status<CR>
 map <Leader>p :PomodoroToDoToday<CR>
 map <Leader>f :Ag 
 
+" Markdown settings:
+let g:vim_markdown_folding_disabled=1
+
+" Airline settings:
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
 
 " Masochist mode - disable arrow keys:
