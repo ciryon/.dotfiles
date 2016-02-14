@@ -78,6 +78,7 @@ autocmd Filetype java set makeprg=javac\ %
 autocmd FileType python set makeprg=python\ %
 autocmd FileType ruby set makeprg=ruby\ %
 autocmd FileType javascript map <C-R> :! node %<CR>
+autocmd BufWritePre *.js :JSHint
 autocmd FileType ruby map <C-R> :! ruby %<CR>
 map <Leader>m :mak<CR>
 map <Leader>r :mak<CR>
