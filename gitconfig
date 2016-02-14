@@ -1,28 +1,33 @@
 [color]
-	ui = auto
+  ui = auto
 [include]
-	path = .secretgitconfig
+  path = .secretgitconfig
 [alias]
-    st = status
-    ci = commit
-    br = branch
-    co = checkout
-    df = diff
-    lg = log --pretty='format:%Cblue%h%d%C(yellow) %s %Cgreen%an%Creset, %ar' --graph
-    who = shortlog -s --
-    rediff = diff master..origin/master --name-status
-    conflicts = !git ls-files -u | cut -f 2 | sort -u
-  diff = vimdiff
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log --pretty='format:%Cblue%h%d%C(yellow) %s %Cgreen%an%Creset, %ar' --graph
+  who = shortlog -s --
+  rediff = diff master..origin/master --name-status
+  conflicts = !git ls-files -u | cut -f 2 | sort -u
   vdiff = diff
 [merge]
-      tool = opendiff
+  tool = opendiff
 [gui]
-	fontui = -family Helvetica -size 14 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family Monaco -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+  fontui = -family Helvetica -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family Monaco -size 11 -weight normal -slant roman -underline 0 -overstrike 0
 [core]
-      editor = vim
+  editor = vim
+  pager = diff-so-fancy | less --tabs=1,5 -R
 [web]
   browser = open
 
 [push]
-	default = matching
+  default = matching
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
