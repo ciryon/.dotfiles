@@ -97,9 +97,6 @@
 [submodule "vim_plugins/swift.vim"]
 	path = vim_plugins/swift.vim
 	url = https://github.com/keith/swift.vim.git
-[submodule "vim_plugins/vim-markdown.git"]
-	path = vim_plugins/vim-markdown.git
-	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "vim_plugins/jshint2.vim"]
 	path = vim_plugins/jshint2.vim
 	url = https://github.com/Shutnik/jshint2.vim.git
