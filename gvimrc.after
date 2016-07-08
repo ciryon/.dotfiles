@@ -1,17 +1,18 @@
 " Good fixed width font from Adobe
-set guifont=Source\ Code\ Pro:h13
+"set guifont=Source\ Code\ Pro:h13
+set guifont=Monaco:h13
 set lines=100
 set columns=160
 set guioptions-=T  "remove toolbar=
 set guioptions-=m  "remove menubar=
 
 " Just keeping a bunch of nice colors schemes here for reference
-"color kellys
+"color kellys  "dark, blue and orange = nice
 "color baycomb
 "color pyte "quite white and bright
 "color ir_black "nice dark and full of contrast
-"color mayansmoke
-color codeschool "nice and blue
+color mayansmoke
+"color codeschool "nice and blue
 
 
 " Windows specific options
@@ -20,5 +21,4 @@ if has("win32")
   source ~/.dotfiles/win/mswin.vim "Enables stuff like ctrl-c to copy
   set keymodel-=stopsel " Allows arrows to extend visual selection
 end
-
 

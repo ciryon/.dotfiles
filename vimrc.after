@@ -14,7 +14,8 @@ set backspace=2 " Backspace works with deleting newlines etc
 " Color
 set t_Co=256
 set background=dark
-colorscheme adam
+colorscheme ir_black " nice readability
+"colorscheme kellys  "dark, blue and orange = nice
 
 
 " CtrlP for fuzzy finding files"
