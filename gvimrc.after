@@ -1,6 +1,7 @@
 " Good fixed width font from Adobe
 "set guifont=Source\ Code\ Pro:h13
-set guifont=Monaco:h13
+"set guifont=Monaco:h13
+set guifont=Meslo\ LG\ L\ Regular\ for\ Powerline:h12
 set lines=100
 set columns=160
 set guioptions-=T  "remove toolbar=
@@ -8,11 +9,11 @@ set guioptions-=m  "remove menubar=
 
 " Just keeping a bunch of nice colors schemes here for reference
 "color kellys  "dark, blue and orange = nice
-"color baycomb
+color baycomb " dark blue/purple, green comments
 "color pyte "quite white and bright
 "color ir_black "nice dark and full of contrast
-color mayansmoke
-"color codeschool "nice and blue
+"color mayansmoke " light/yellowish with red/green, good readability
+"color codeschool "dark gray, nice and blue with some green
 
 
 " Windows specific options

@@ -73,9 +73,6 @@
 [submodule "vim_plugins/vim-coffee-script"]
 	path = vim_plugins/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script
-[submodule "vim_plugins/ultisnips"]
-	path = vim_plugins/ultisnips
-	url = https://github.com/SirVer/ultisnips
 [submodule "vim_plugins/vim-jsx"]
 	path = vim_plugins/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
@@ -100,3 +97,6 @@
 [submodule "vim_plugins/jshint2.vim"]
 	path = vim_plugins/jshint2.vim
 	url = https://github.com/Shutnik/jshint2.vim.git
+[submodule "vim_plugins/vim-endwise.git"]
+	path = vim_plugins/vim-endwise.git
+	url = git://github.com/tpope/vim-endwise.git

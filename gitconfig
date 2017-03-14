@@ -9,7 +9,7 @@
   co = checkout
   pu = pull
   df = diff
-  lg = log --pretty='format:%Cblue%h%d%C(yellow) %s %Cgreen%an%Creset, %ar' --graph
+  lg = log --pretty='format:%Cblue%h%d%C(yellow) %s %Cgreen%an%Creset, %aD' --graph
   who = shortlog -s --
   rediff = diff master..origin/master --name-status
   conflicts = !git ls-files -u | cut -f 2 | sort -u

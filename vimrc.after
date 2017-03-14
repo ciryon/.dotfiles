@@ -29,14 +29,11 @@ map <Leader>b :CtrlPBuffer<CR>
       "\ --ignore "**/*.pyc"
       "\ -g ""'
 
+" NERDTree
 map <silent> <Leader>n :NERDTreeToggle<CR>
 map <Leader>j :NERDTreeFind<CR>
-let g:netrw_liststyle=3
-" Hit enter in the file browser to open the selected
-" file with :vsplit to the right of the browser.
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_banner=0 " Hide the help/info banner
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 
 " Searching
@@ -46,7 +43,7 @@ set incsearch "search while typing
 " Encoding
 set encoding=utf-8
 
-" Whitespace stuff
+" Whitespace and lines
 set nolist " No list characters
 set wrap
 set linebreak 
@@ -60,6 +57,8 @@ set tabpagemax=15               " only show 15 tabs
 set nocursorline " No cursor line, thanks
 set number
 set showmode                    " display the current mode
+set colorcolumn=121
+set textwidth=120
 
 " Curly brackets
 inoremap {      {}<Left>
@@ -75,14 +74,22 @@ map <F10> :source ~/vim_session <cr>     " And load session with F10
 
 nmap <buffer> <silent> <F1> :exec 'silent !open "'. escape('http://www.google.com/search?q='.expand('<cword>').'&btnI=745', ' &!%').'"'<cr>:redraw!<cr>
 
+map <Leader>r :mak<CR>
+
+"Autocommands
 autocmd Filetype java set makeprg=javac\ %
 autocmd FileType python set makeprg=python\ %
 autocmd FileType ruby set makeprg=ruby\ %
 autocmd FileType javascript map <C-R> :! node %<CR>
+autocmd FileType javascript map <Leader>r :! node %<CR>
 autocmd BufWritePre *.js :JSHint
 autocmd FileType ruby map <C-R> :! ruby %<CR>
+autocmd FileType gitcommit set colorcolumn=73
+autocmd FileType gitcommit set textwidth=72
+
+
+"Shortcuts
 map <Leader>m :mak<CR>
-map <Leader>r :mak<CR>
 map <Leader>g :!git status<CR>
 map <Leader>p :PomodoroToDoToday<CR>
 map <Leader>f :Ag 
@@ -107,6 +114,3 @@ let g:airline_powerline_fonts = 1
 
 
 set history=1000                " Store a ton of history (default is 20)
-
-
-map <d-t> :CtrlP<CR>
