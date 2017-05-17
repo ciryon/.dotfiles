@@ -100,3 +100,6 @@
 [submodule "vim_plugins/vim-endwise.git"]
 	path = vim_plugins/vim-endwise.git
 	url = git://github.com/tpope/vim-endwise.git
+[submodule "vim_plugins/neomake"]
+	path = vim_plugins/neomake
+	url = https://github.com/neomake/neomake.git
