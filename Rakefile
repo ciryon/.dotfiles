@@ -1,14 +1,19 @@
 # Rakefile for installing dotfiles
 # Taken from rbates originally
-# 
+ 
 
 require 'rake'
 require 'erb'
 
-desc "install the dot files into user's home directory"
+desc "download dependencies and link the dot files into user's home directory"
 task :install do
   install_pathogen
   install_vim_modules
+  link_dotfiles
+end
+
+desc "link dot files into user's home directory"
+task :link do
   link_dotfiles
 end
 
