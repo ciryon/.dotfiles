@@ -1,5 +1,16 @@
 *Notes to self*
 
+
+## Mac OS X
+* Install XCode
+* Install XCode command line tools, xcode-select --install
+* Install HomeBrew
+* Install git and git-flow
+* Install MacVim
+* git clone ssh://github.com/ciryon/.dotfiles ~/.dotfiles
+* cd ~/.dotfiles; rake install
+
+
 ## Windows 8/10
 * Install Chocolately
 * Install Cmder
@@ -9,14 +20,5 @@
 * Run setup.bat in .dotfiles\win\
 
 
-
-## Mac OS X
-* Install XCode
-* Install XCode command line tools, xcode-select --install
-* Install HomeBrew
-* Install git and git-flow
-* Install MacVim
-* git clone ssh://github.com/ciryon/.dotfiles ~/.dotfiles
-* cd ~/.dotfiles; rake
 
 
