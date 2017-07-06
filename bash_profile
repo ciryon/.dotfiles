@@ -10,6 +10,7 @@ export CLICOLOR=1
 export EDITOR="vim"
 export REACT_EDITOR="vim"
 export ANDROID_HOME=/usr/local/opt/android-sdk
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
 export PATH=/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH:/Developer/Android/tools:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts
 
 # Set the number of open files to be 1024
@@ -71,7 +72,7 @@ alias r='rails'
 alias subs='echo "Recursively updating Git submodules..."; git submodule update --init --recursive'
 alias pico=vim
 alias chrome-insecure='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-running-insecure-content  --disable-web-security'
-alias vim='nvim' # Lets see how this works...
+#alias vim='nvim' # Lets see how this works...
 
 # Ruby versioning
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
