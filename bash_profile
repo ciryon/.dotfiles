@@ -9,9 +9,9 @@
 export CLICOLOR=1
 export EDITOR="vim"
 export REACT_EDITOR="vim"
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=~/Library/Android/sdk/
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
-export PATH=/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH:/Developer/Android/tools:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts
+export PATH=/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$ANDROID_HOME/platform-tools
 
 # Set the number of open files to be 1024
 ulimit -S -n 1024
