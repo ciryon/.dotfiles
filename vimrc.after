@@ -14,8 +14,10 @@ set backspace=2 " Backspace works with deleting newlines etc
 " Color
 set t_Co=256
 set background=dark
-colorscheme ir_black " nice readability
-highlight ColorColumn ctermbg=232
+"colorscheme ir_black " nice readability
+"colorscheme apprentice " https://github.com/romainl/Apprentice
+colorscheme lapis256 " Nice and blue
+highlight ColorColumn ctermbg=000
 "colorscheme kellys  "dark, blue and orange = nice
 
 
@@ -59,8 +61,8 @@ set tabpagemax=15               " only show 15 tabs
 set nocursorline " No cursor line, thanks
 set number
 set showmode                    " display the current mode
-set colorcolumn=121
-set textwidth=120
+set colorcolumn=0
+"set textwidth=120
 
 " Curly brackets
 inoremap {      {}<Left>
@@ -84,7 +86,7 @@ autocmd FileType python set makeprg=python\ %
 autocmd FileType ruby set makeprg=ruby\ %
 autocmd FileType javascript map <C-R> :! node %<CR>
 autocmd FileType javascript map <Leader>r :! node %<CR>
-autocmd BufWritePre *.js :JSHint
+"autocmd BufWritePre *.js :eslint %\
 autocmd FileType ruby map <Leader>r :! ruby %<CR>
 autocmd FileType gitcommit set colorcolumn=73
 autocmd FileType gitcommit set textwidth=72

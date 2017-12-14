@@ -103,3 +103,12 @@
 [submodule "vim_plugins/neomake"]
 	path = vim_plugins/neomake
 	url = https://github.com/neomake/neomake.git
+[submodule "vim_plugins/apprentice"]
+	path = vim_plugins/apprentice
+	url = https://github.com/romainl/Apprentice
+[submodule "vim_plugins/vim-lapis256"]
+	path = vim_plugins/vim-lapis256
+	url = ssh://github.com/andrwb/vim-lapis256
+[submodule "vim_plugins/vim-syntastic"]
+	path = vim_plugins/vim-syntastic
+	url = ssh://github.com/vim-syntastic/syntastic

@@ -101,5 +101,8 @@ test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_i
 
 export LANG=en_US.UTF-8
 
+# direnv
+eval "$(direnv hook bash)"
+
 # Secrets file (not to be version controlled)
 SECRETS=~/.secrets && test -f $SECRETS && source $SECRETS
