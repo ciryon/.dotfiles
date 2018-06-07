@@ -5,12 +5,15 @@
 # 
 ###########################################################
 
+# Quit if we're not an interactive shell
+[ -z "$PS1" ] && return
+
 # Setup exports
 export CLICOLOR=1
 export EDITOR="vim"
 export REACT_EDITOR="vim"
 export ANDROID_HOME=~/Library/Android/sdk/
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+export AWS_CONFIG_FILE=~/.aws/config
 export PATH=/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$ANDROID_HOME/platform-tools
 
 # Set the number of open files to be 1024
@@ -19,6 +22,11 @@ ulimit -S -n 1024
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
       . $(brew --prefix)/etc/bash_completion
 fi
+
+# AWS completion
+complete -C aws_completer aws
+alias aws-profile="source aws-profile"
+alias aws="aws-wrapper"
 
 # Setup the fancy color prompt
 function proml {
