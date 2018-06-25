@@ -14,7 +14,7 @@ export EDITOR="vim"
 export REACT_EDITOR="vim"
 export ANDROID_HOME=~/Library/Android/sdk/
 export AWS_CONFIG_FILE=~/.aws/config
-export PATH=/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$PATH:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$ANDROID_HOME/platform-tools
+export PATH=/Users/ciryon/.rvm/gems/ruby-2.4.1/bin:/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$ANDROID_HOME/platform-tools:$PATH
 
 # Set the number of open files to be 1024
 ulimit -S -n 1024
@@ -81,6 +81,9 @@ alias subs='echo "Recursively updating Git submodules..."; git submodule update 
 alias pico=vim
 alias chrome-insecure='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-running-insecure-content  --disable-web-security'
 #alias vim='nvim' # Lets see how this works...
+
+# Pager with nice colors
+export PAGER="most"
 
 # Ruby versioning
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi

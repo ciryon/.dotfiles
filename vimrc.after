@@ -39,6 +39,9 @@ map <Leader>j :NERDTreeFind<CR>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
+" Commenting
+let NERDSpaceDelims=1
+let g:NERDDefaultAlign = 'left'
 
 " Searching
 set hlsearch " highlight searches
