@@ -8,20 +8,20 @@
 # Quit if we're not an interactive shell
 [ -z "$PS1" ] && return
 
-# Setup exports
-export CLICOLOR=1
-export EDITOR="vim"
-export REACT_EDITOR="vim"
-export ANDROID_HOME=~/Library/Android/sdk/
-export AWS_CONFIG_FILE=~/.aws/config
-export PATH=/Users/ciryon/.rvm/gems/ruby-2.4.1/bin:/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$ANDROID_HOME/platform-tools:$PATH
-
 # Set the number of open files to be 1024
 ulimit -S -n 1024
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
       . $(brew --prefix)/etc/bash_completion
 fi
+
+# Setup exports
+export CLICOLOR=1
+export EDITOR="vim"
+export REACT_EDITOR="vim"
+export ANDROID_HOME=~/Library/Android/sdk/
+export AWS_CONFIG_FILE=~/.aws/config
+export PATH=/bin:/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$ANDROID_HOME/platform-tools:$PATH
 
 # AWS completion
 complete -C aws_completer aws
@@ -88,10 +88,7 @@ export PAGER="most"
 # Ruby versioning
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# tabtab source for ec2-ssh package
-# uninstall by removing these lines or running `tabtab uninstall ec2-ssh`
-[ -f /usr/local/lib/node_modules/ec2-ssh/node_modules/tabtab/.completions/ec2-ssh.bash ] && . /usr/local/lib/node_modules/ec2-ssh/node_modules/tabtab/.completions/ec2-ssh.bash
+export RBENV_VERSION=2.5.1
 
 # man formatters
 vman () {
@@ -117,3 +114,4 @@ eval "$(direnv hook bash)"
 
 # Secrets file (not to be version controlled)
 SECRETS=~/.secrets && test -f $SECRETS && source $SECRETS
+
