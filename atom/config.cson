@@ -1,0 +1,66 @@
+"*":
+  "atom-mocha":
+    environmentVariables: '''
+      SETTINGS='{
+      	"accountInfo": {
+      		"accountId": "854473182333",
+      		"loginUrl": "www.amazon.com"
+      	},
+      	"cognitoInfo": {
+      		"apiVersion": "2014-06-30"
+      	},
+      	"iotInfo": {
+      		"qos": 1
+      	}
+      }';REGIONS='{
+      	"us-east-1": {
+      		"iotEndPoint": "a3fix436a7guq8.iot.us-east-1.amazonaws.com",
+      		"idtPoolId": "us-east-1:77d214b3-1a55-4627-bb55-7287fd13660d",
+      		"ddbPairingTable": "alexa_table",
+      		"ddbAccessoriesTable": "accessory_table"
+      	},
+      	"eu-west-1": {
+      		"iotEndPoint": "a3fix436a7guq8.iot.eu-west-1.amazonaws.com",
+      		"idtPoolId": "eu-west-1:c42913a4-6a6c-45e4-8d7c-a12026a9b1a9",
+      		"ddbPairingTable": "alexa_pairing_table_CF",
+      		"ddbAccessoriesTable": "accessory_table_CF"
+      	}
+      }'
+    '''
+  "autocomplete-ruby":
+    rsensePath: "/Users/ciryon/.rvm/gems/ruby-2.4.1/bin/rsense"
+  core:
+    disabledPackages: [
+      "node-debugger"
+    ]
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "no"
+    themes: [
+      "city-lights-ui"
+      "city-lights-syntax"
+    ]
+  editor:
+    fontSize: 13
+    preferredLineLength: 140
+    scrollPastEnd: true
+  "exception-reporting":
+    userId: "6e0b8ff0-9949-4626-8418-5f96a51881b8"
+  "linter-ui-default":
+    panelHeight: 242
+  "plantuml-preview":
+    jarLocation: "/usr/local/Cellar/plantuml/1.2017.16/libexec/plantuml.jar"
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
+  touchbar:
+    buttons: "[{\"type\":\"button\",\"name\":\"Config 1529993107668\",\"label\":\"🗄\",\"command\":\"tree-view:toggle\",\"color\":\"#898989\"},{\"name\":\"beautify-button\",\"type\":\"button\",\"label\":\"💅\",\"command\":\"atom-beautify:beautify-editor\",\"color\":\"#69806b\"},{\"name\":\"my-new-label\",\"type\":\"label\",\"label\":\"📝 TODO\",\"color\":\"#FF9300\",\"command\":\"todo-show:toggle\"},{\"name\":\"toggle-command-palette\",\"type\":\"button\",\"label\":\"🎨\",\"command\":\"command-palette:toggle\"},{\"name\":\"comment-button\",\"type\":\"button\",\"label\":\"//\",\"command\":\"editor:toggle-line-comments\",\"color\":\"#18063b\"},{\"name\":\"toggle-github\",\"type\":\"button\",\"label\":\"GitHub\",\"color\":\"#0033cc\",\"command\":\"github:toggle-github-tab\"},{\"type\":\"button\",\"name\":\"Config 1529993408476\",\"label\":\"⏱ Diff\",\"command\":\"git-time-machine:toggle\"}]"
+  "tree-view":
+    autoReveal: true
+    hideVcsIgnoredFiles: true
+    squashDirectoryNames: true
+  "vim-mode-plus": {}
+  welcome:
+    showOnStartup: false
