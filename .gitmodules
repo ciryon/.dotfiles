@@ -52,9 +52,6 @@
 [submodule "vim_plugins/vim-rspec"]
 	path = vim_plugins/vim-rspec
 	url = https://github.com/thoughtbot/vim-rspec
-[submodule "vim_plugins/vim-haml"]
-	path = vim_plugins/vim-haml
-	url = https://github.com/tpope/vim-haml
 [submodule "vim_plugins/vim-css-color"]
 	path = vim_plugins/vim-css-color
 	url = https://github.com/skammer/vim-css-color
@@ -106,9 +103,6 @@
 [submodule "vim_plugins/apprentice"]
 	path = vim_plugins/apprentice
 	url = https://github.com/romainl/Apprentice
-[submodule "vim_plugins/vim-lapis256"]
-	path = vim_plugins/vim-lapis256
-	url = ssh://github.com/andrwb/vim-lapis256
 [submodule "vim_plugins/vim-syntastic"]
 	path = vim_plugins/vim-syntastic
 	url = ssh://github.com/vim-syntastic/syntastic

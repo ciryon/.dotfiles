@@ -15,8 +15,8 @@ set backspace=2 " Backspace works with deleting newlines etc
 set t_Co=256
 set background=dark
 "colorscheme ir_black " nice readability
-"colorscheme apprentice " https://github.com/romainl/Apprentice
-colorscheme lapis256 " Nice and blue
+colorscheme apprentice " https://github.com/romainl/Apprentice
+" colorscheme lapis256 " Nice and blue
 highlight ColorColumn ctermbg=000
 "colorscheme kellys  "dark, blue and orange = nice
 
