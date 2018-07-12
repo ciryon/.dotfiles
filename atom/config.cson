@@ -48,6 +48,9 @@
   "linter-ui-default":
     panelHeight: 242
     showPanel: true
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   "plantuml-preview":
     jarLocation: "/usr/local/Cellar/plantuml/1.2017.16/libexec/plantuml.jar"
   "split-diff":
