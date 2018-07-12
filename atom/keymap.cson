@@ -33,6 +33,13 @@
 
 '.platform-darwin':
   ',-b': 'fuzzy-finder:toggle-buffer-finder'
+  'cmd-shift-j': 'tree-view:toggle-focus'
 
 '.platform-darwin atom-text-editor':
   'cmd-r': 'run:file'
+  'shift-alt-cmd-left': 'editor:select-to-first-character-of-line'
+  'shift-alt-cmd-right': 'editor:select-to-end-of-line'
+
+'body':
+  'cmd-shift-right': 'pane:show-next-item'
+  'cmd-shift-left': 'pane:show-previous-item'
