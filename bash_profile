@@ -25,8 +25,6 @@ export PATH=/bin:/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$RUB
 
 # AWS completion
 complete -C aws_completer aws
-alias aws-profile="source aws-profile"
-alias aws="aws-wrapper"
 
 # Setup the fancy color prompt
 function proml {
@@ -81,7 +79,9 @@ alias r='rails'
 alias subs='echo "Recursively updating Git submodules..."; git submodule update --init --recursive'
 alias pico=vim
 alias chrome-insecure='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-running-insecure-content  --disable-web-security'
-#alias vim='nvim' # Lets see how this works...
+alias aws-profile="source aws-profile"
+alias aws="aws-wrapper"
+alias chrome="open -a \"Google Chrome\""
 
 # Pager with nice colors
 export PAGER="most"

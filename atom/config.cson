@@ -36,15 +36,23 @@
   core:
     disabledPackages: [
       "node-debugger"
+      "github"
     ]
     packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
   editor:
-    fontSize: 13
+    fontSize: 12
     preferredLineLength: 140
     scrollPastEnd: true
+    showIndentGuide: true
   "exception-reporting":
     userId: "6e0b8ff0-9949-4626-8418-5f96a51881b8"
+  "linter-eslint":
+    fixOnSave: true
+    lintHtmlFiles: true
+    rulesToSilenceWhileTyping: [
+      "no-trailing-spaces"
+    ]
   "linter-ui-default":
     panelHeight: 242
     showPanel: true
@@ -53,6 +61,8 @@
     forceOverwrite: true
   "plantuml-preview":
     jarLocation: "/usr/local/Cellar/plantuml/1.2017.16/libexec/plantuml.jar"
+  pomodoro:
+    playTicks: false
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -60,7 +70,7 @@
     rightEditorColor: "green"
     scrollSyncType: "Vertical + Horizontal"
   touchbar:
-    buttons: "[{\"type\":\"button\",\"name\":\"Config 1529993107668\",\"label\":\"🗄\",\"command\":\"tree-view:toggle\",\"color\":\"#898989\"},{\"name\":\"beautify-button\",\"type\":\"button\",\"label\":\"💅\",\"command\":\"atom-beautify:beautify-editor\",\"color\":\"#69806b\"},{\"name\":\"my-new-label\",\"type\":\"label\",\"label\":\"📝 TODO\",\"color\":\"#FF9300\",\"command\":\"todo-show:toggle\"},{\"type\":\"button\",\"name\":\"Config 1529993408476\",\"label\":\"⏱ Diff\",\"command\":\"git-time-machine:toggle\",\"color\":\"#edc3d2\"},{\"type\":\"button\",\"name\":\"Config 1530618130985\",\"label\":\"☕️ Mocha\",\"command\":\"mocha-test-runner:run\",\"color\":\"#4f9e5d\"},{\"type\":\"button\",\"name\":\"Config 1530868660106\",\"command\":\"lazy-motion:forward\",\"label\":\"🔍 Find\",\"icon\":\"\"},{\"type\":\"button\",\"name\":\"Config 1530869272999\",\"command\":\"pomodoro:start\",\"label\":\"🍎 \"}]"
+    buttons: "[{\"type\":\"button\",\"name\":\"Config 1529993107668\",\"label\":\"🗄\",\"command\":\"tree-view:toggle\",\"color\":\"#898989\"},{\"name\":\"beautify-button\",\"type\":\"button\",\"label\":\"💅\",\"command\":\"atom-beautify:beautify-editor\",\"color\":\"#69806b\"},{\"name\":\"my-new-label\",\"type\":\"label\",\"label\":\"📝 TODO\",\"color\":\"#FF9300\",\"command\":\"todo-show:toggle\"},{\"type\":\"button\",\"name\":\"Config 1529993408476\",\"label\":\"⏱ Diff\",\"command\":\"git-time-machine:toggle\",\"color\":\"#edc3d2\"},{\"type\":\"button\",\"name\":\"Config 1530618130985\",\"label\":\"☕️ Mocha\",\"command\":\"mocha-test-runner:run\",\"color\":\"#4f9e5d\"},{\"type\":\"button\",\"name\":\"Config 1530868660106\",\"command\":\"lazy-motion:forward\",\"label\":\"🔍 Find\",\"icon\":\"\"}]"
   "tree-view":
     autoReveal: true
     hideIgnoredNames: true
