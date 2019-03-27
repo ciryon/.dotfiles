@@ -31,30 +31,48 @@
       	}
       }'
     '''
+  "atom-trello":
+    devKey: "811ad3706c86146cbe274c1e1c7cbf6c"
+    token: "e61bcc84e807bddc570407b70f22f2c59a72f03a03368b470fd777dbf190d95e"
   "autocomplete-ruby":
     rsensePath: "/Users/ciryon/.rvm/gems/ruby-2.4.1/bin/rsense"
   core:
+    closeDeletedFileTabs: true
     disabledPackages: [
       "node-debugger"
-      "github"
     ]
     packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "one-dark-syntax"
+    ]
   editor:
-    fontSize: 12
+    fontSize: 15
     preferredLineLength: 140
     scrollPastEnd: true
     showIndentGuide: true
   "exception-reporting":
     userId: "6e0b8ff0-9949-4626-8418-5f96a51881b8"
   "linter-eslint":
-    fixOnSave: true
+    autofix:
+      fixOnSave: true
+    disabling:
+      rulesToSilenceWhileTyping: [
+        "no-trailing-spaces"
+      ]
     lintHtmlFiles: true
-    rulesToSilenceWhileTyping: [
-      "no-trailing-spaces"
+    scopes: [
+      "source.js"
+      "source.jsx"
+      "source.js.jsx"
+      "source.flow"
+      "source.babel"
+      "source.js-semantic"
+      "text.html.vue"
     ]
   "linter-ui-default":
-    panelHeight: 242
+    panelHeight: 175
     showPanel: true
   "package-sync":
     createOnChange: true
@@ -74,7 +92,6 @@
   "tree-view":
     autoReveal: true
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   "vim-mode-plus":
     useClipboardAsDefaultRegister: false
