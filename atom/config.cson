@@ -3,39 +3,6 @@
     js:
       jslint_happy: true
       space_after_anon_function: true
-  "atom-mocha":
-    environmentVariables: '''
-      SETTINGS='{
-      	"accountInfo": {
-      		"accountId": "854473182333",
-      		"loginUrl": "www.amazon.com"
-      	},
-      	"cognitoInfo": {
-      		"apiVersion": "2014-06-30"
-      	},
-      	"iotInfo": {
-      		"qos": 1
-      	}
-      }';REGIONS='{
-      	"us-east-1": {
-      		"iotEndPoint": "a3fix436a7guq8.iot.us-east-1.amazonaws.com",
-      		"idtPoolId": "us-east-1:77d214b3-1a55-4627-bb55-7287fd13660d",
-      		"ddbPairingTable": "alexa_table",
-      		"ddbAccessoriesTable": "accessory_table"
-      	},
-      	"eu-west-1": {
-      		"iotEndPoint": "a3fix436a7guq8.iot.eu-west-1.amazonaws.com",
-      		"idtPoolId": "eu-west-1:c42913a4-6a6c-45e4-8d7c-a12026a9b1a9",
-      		"ddbPairingTable": "alexa_pairing_table_CF",
-      		"ddbAccessoriesTable": "accessory_table_CF"
-      	}
-      }'
-    '''
-  "atom-trello":
-    devKey: "811ad3706c86146cbe274c1e1c7cbf6c"
-    token: "e61bcc84e807bddc570407b70f22f2c59a72f03a03368b470fd777dbf190d95e"
-  "autocomplete-ruby":
-    rsensePath: "/Users/ciryon/.rvm/gems/ruby-2.4.1/bin/rsense"
   core:
     closeDeletedFileTabs: true
     disabledPackages: [
