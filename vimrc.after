@@ -62,7 +62,7 @@ set shiftwidth=2                " use indents of 4 spaces
 set expandtab                   " tabs are spaces, not tabs
 set tabpagemax=15               " only show 15 tabs
 set nocursorline " No cursor line, thanks
-set number
+set nonumber " No need for line numbers
 set showmode                    " display the current mode
 set colorcolumn=0
 "set textwidth=120

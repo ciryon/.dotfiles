@@ -41,6 +41,8 @@
   "linter-ui-default":
     panelHeight: 175
     showPanel: true
+  "linter-yaml":
+    useProjectConfig: true
   "package-sync":
     createOnChange: true
     forceOverwrite: true

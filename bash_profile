@@ -21,7 +21,7 @@ export EDITOR="vim"
 export REACT_EDITOR="vim"
 export ANDROID_HOME=~/Library/Android/sdk/
 export AWS_CONFIG_FILE=~/.aws/config
-export PATH=/bin:/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$ANDROID_HOME/platform-tools:$PATH
+export PATH=/bin:/usr/local/bin:$M2_HOME/bin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$PATH:~/dev/flutter/bin
 
 # AWS completion
 complete -C aws_completer aws
@@ -82,6 +82,8 @@ alias chrome-insecure='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ C
 alias aws-profile="source aws-profile"
 alias aws="aws-wrapper"
 alias chrome="open -a \"Google Chrome\""
+# alias atom="echo 'You did mean code right?'; code"
+alias s="code .; yarn run dev"
 
 # Pager with nice colors
 export PAGER="most"

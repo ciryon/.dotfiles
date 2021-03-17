@@ -24,6 +24,7 @@
 [core]
   editor = vim
   pager = diff-so-fancy | less --tabs=1,5 -R
+	excludesfile = /Users/ciryon/.gitignore_global
 [web]
   browser = open
 [push]
@@ -41,3 +42,13 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/ciryon/.stCommitMsg
+[pull]
+	rebase = false
