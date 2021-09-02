@@ -42,14 +42,6 @@ export AWS_CONFIG_FILE=~/.aws/config
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='code'
-fi
-
-
 # Dont use universal history
 unsetopt inc_append_history
 unsetopt share_history
@@ -62,12 +54,6 @@ alias ra='cd ~/Coding/Ruby_on_Rails'
 alias ja='cd ~/Coding/Java'
 alias js='cd ~/Coding/JavaScript'
 alias ru='cd ~/Coding/Ruby'
-if [[ -n $AWS_EXECUTION_ENV ]]; then
-  alias pu='cd ~/Coding/PulsSolutions && echo Puls'
-else
-  alias pu='cd ~/Coding/PulsSolutions && asp puls-dev && echo Puls'
-fi
-
 alias is='cd ~/Coding/Istari && asp istari && echo Istari'
 alias t='tmux'
 alias yesterday='~/Coding/misc_scripts/yesterday.rb'
@@ -92,11 +78,6 @@ alias s='iterm "cd $PWD; vim ."; yarn run dev'
 # Pager with nice colors
 export PAGER="most"
 
-# And a Fortune!
-echo ""
-tput setaf 1; fortune -s aynrand
-echo ""
-echo ""
 
 # Secrets file (not to be version controlled)
 SECRETS=~/.secrets && test -f $SECRETS && source $SECRETS
@@ -107,5 +88,18 @@ source ~/.rvm/scripts/rvm
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=/usr/local/bin:/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$HOME/dev/flutter/.pub-cache/bin:$HOME/dev/flutter/bin:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/opt/metasploit-framework/bin
+
+if [[ -n $AWS_EXECUTION_ENV ]]; then
+  # AWS CloudConsole
+  alias pu='cd ~/Coding/PulsSolutions && echo Puls'
+else
+  # Local environment
+  alias pu='cd ~/Coding/PulsSolutions && asp puls-dev && echo Puls'
+  # And a Fortune!
+  echo ""
+  tput setaf 1; fortune -s aynrand
+  echo ""
+  echo ""
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
