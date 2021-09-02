@@ -1,0 +1,13 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "json",
+    "javascriptvue",
+    "typescript.tsx"
+  ],
+  "eslint.filetypes": ["javascript", "javascriptvue"],
+  "coc.preferences.diagnostic.virtualText": true,
+  "javascript.suggestionActions.enabled": false,
+  "json.suggestionActions.enabled": false
+}
