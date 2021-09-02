@@ -1,3 +1,9 @@
+
+include () {
+    [[ -f "$1" ]] && source "$1"
+}
+
+
 export ZSH="/Users/ciryon/.oh-my-zsh"
 # ZSH_THEME="agnoster" # fancy
 # ZSH_THEME="amuse" # fancy
@@ -27,7 +33,7 @@ ZSH_DOTENV_FILE=.envrc
 ZSH_DOTENV_PROMPT=false
 SHOW_AWS_PROMPT=false
 
-source $ZSH/oh-my-zsh.sh
+include $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -84,7 +90,8 @@ SECRETS=~/.secrets && test -f $SECRETS && source $SECRETS
 
 # export NVM_DIR="~/.nvm"
 # source ~/.nvm/nvm.sh
-source ~/.rvm/scripts/rvm
+
+include ~/.rvm/scripts/rvm
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=/usr/local/bin:/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$HOME/dev/flutter/.pub-cache/bin:$HOME/dev/flutter/bin:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/opt/metasploit-framework/bin
@@ -102,4 +109,4 @@ else
   echo ""
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+include ~/.fzf.zsh
