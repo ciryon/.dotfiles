@@ -31,6 +31,22 @@ set updatetime=300
 set cmdheight=2
 set mouse=a
 
+" Whitespace
+set nolist " No list characters
+set wrap
+set linebreak 
+set showbreak=¬
+set tabstop=2
+set softtabstop=2
+set autoindent                  " indent at the same level of the previous line
+set shiftwidth=2                " use indents of 4 spaces
+set expandtab                   " tabs are spaces, not tabs
+set tabpagemax=15               " only show 15 tabs
+set nocursorline " No cursor line, thanks
+set nonumber " No need for line numbers
+set showmode                    " display the current mode
+set colorcolumn=0
+
 if has("nvim-0.5.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
