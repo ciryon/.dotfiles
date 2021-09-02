@@ -77,7 +77,6 @@ alias code="echo 'You did vim code right? Otherwise run /usr/local/bin/code'; vi
 alias prod="node ./scripts/deploy_site.js www puls-solutions.com appen sv dryRun; echo 'config is for prod now' "
 alias logs='echo "Tailing ${PWD##*/}-${ENVIRONMENT}"; aws logs tail --format short --follow  "/aws/lambda/${PWD##*/}-${ENVIRONMENT}"'
 alias lg=lazygit
-alias cat='bat --paging=never --style "changes,rule,snip"'
 alias vim=nvim
 alias s='iterm "cd $PWD; vim ."; yarn run dev'
 
@@ -102,6 +101,7 @@ if [[ -n $AWS_EXECUTION_ENV ]]; then
 else
   # Local environment
   alias pu='cd ~/Coding/PulsSolutions && asp puls-dev && echo Puls'
+  alias cat='bat --paging=never --style "changes,rule,snip"'
   # And a Fortune!
   echo ""
   tput setaf 1; fortune -s aynrand
