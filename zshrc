@@ -19,6 +19,7 @@ plugins=(
   nvm
   #rvm
   brew
+  #zsh-autosuggestions
   )
 
 # Plugin settings
@@ -48,6 +49,11 @@ else
   export EDITOR='code'
 fi
 
+
+# Dont use universal history
+unsetopt inc_append_history
+unsetopt share_history
+
 # Aliases
 alias g='/usr/local/bin/git'
 alias xc='cd ~/Coding/XCode'
@@ -70,9 +76,13 @@ alias aws-profile="asp"
 alias aws="aws-wrapper"
 alias chrome="open -a \"Google Chrome\""
 # alias atom="echo 'You did mean code right?'; code"
-alias s="code .; yarn run dev"
+alias code="echo 'You did vim code right? Otherwise run /usr/local/bin/code'; vim"
 alias prod="node ./scripts/deploy_site.js www puls-solutions.com appen sv dryRun; echo 'config is for prod now' "
 alias logs='echo "Tailing ${PWD##*/}-${ENVIRONMENT}"; aws logs tail --format short --follow  "/aws/lambda/${PWD##*/}-${ENVIRONMENT}"'
+alias lg=lazygit
+alias cat='bat --paging=never --style "changes,rule,snip"'
+alias vim=nvim
+alias s='iterm "cd $PWD; vim ."; yarn run dev'
 
 # Pager with nice colors
 export PAGER="most"
@@ -86,9 +96,11 @@ echo ""
 # Secrets file (not to be version controlled)
 SECRETS=~/.secrets && test -f $SECRETS && source $SECRETS
 
-export NVM_DIR="~/.nvm"
-source ~/.nvm/nvm.sh
-source /Users/ciryon/.rvm/scripts/rvm
+# export NVM_DIR="~/.nvm"
+# source ~/.nvm/nvm.sh
+source ~/.rvm/scripts/rvm
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH=/usr/local/bin:/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$HOME/dev/flutter/.pub-cache/bin:$HOME/dev/flutter/bin:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=/usr/local/bin:/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$HOME/dev/flutter/.pub-cache/bin:$HOME/dev/flutter/bin:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/opt/metasploit-framework/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
