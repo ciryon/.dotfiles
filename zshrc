@@ -55,14 +55,19 @@ unsetopt inc_append_history
 unsetopt share_history
 
 # Aliases
-alias g='/usr/local/bin/git'
+alias g='git'
 alias xc='cd ~/Coding/XCode'
 alias an='cd ~/Coding/Android'
 alias ra='cd ~/Coding/Ruby_on_Rails'
 alias ja='cd ~/Coding/Java'
 alias js='cd ~/Coding/JavaScript'
 alias ru='cd ~/Coding/Ruby'
-alias pu='cd ~/Coding/PulsSolutions && asp puls-dev && echo Puls'
+if [[ -n $AWS_EXECUTION_ENV ]]; then
+  alias pu='cd ~/Coding/PulsSolutions && echo Puls'
+else
+  alias pu='cd ~/Coding/PulsSolutions && asp puls-dev && echo Puls'
+fi
+
 alias is='cd ~/Coding/Istari && asp istari && echo Istari'
 alias t='tmux'
 alias yesterday='~/Coding/misc_scripts/yesterday.rb'
