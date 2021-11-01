@@ -10,7 +10,8 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'kyazdani42/nvim-tree.lua'
 " Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'akinsho/bufferline.nvim'
+" Plug 'akinsho/bufferline.nvim'
+Plug 'romgrk/barbar.nvim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -18,7 +19,9 @@ Plug 'yuezk/vim-js'
 Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
 Plug 'b3nj5m1n/kommentary'
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+Plug 'OmniSharp/omnisharp-vim' " for c#
+Plug 'alvan/vim-closetag'
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-omnisharp']
 call plug#end()
 
 " Config Section
@@ -68,7 +71,11 @@ endif
 "colorscheme abyss
 " colorscheme dracula
 " colorscheme onehalfdark
-colorscheme sonokai
+let g:sonokai_style = 'maia'
+colorscheme onehalfdark
+
+" Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Completion settings
 " Use tab for trigger completion with characters ahead and navigate.
@@ -79,6 +86,22 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" start coc-snippet tab
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+" end coc-snippet tab
+
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -98,6 +121,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
+
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -110,10 +134,14 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <a>f  <Plug>(coc-format-selected)
+nmap <a>f  <Plug>(coc-format-selected)
 
-
+" move with alt-arrow
+nnoremap <A-Up> :m-2<CR>
+nnoremap <A-Down> :m+<CR>
+inoremap <A-Up> <Esc>:m-2<CR>
+inoremap <A-Down> <Esc>:m+<CR>
 
 
 " NERDTree
@@ -172,18 +200,36 @@ vim.api.nvim_set_keymap("x", "<leader>c", "<Plug>kommentary_visual_default", {})
 EOF
 
 " Bufferline
-set termguicolors
-lua << EOF
-require("bufferline").setup{
-	options = {
-offsets = {
-  {
-    filetype = "NvimTree",
-    text = "File Explorer",
-    highlight = "Directory",
-    text_align = "left"
-  }
-}
-	   }
-   }
-EOF
+nnoremap <silent>    <A-[> :BufferPrevious<CR>
+nnoremap <silent>    <A-]> :BufferNext<CR>
+nnoremap <silent>    <A-w> :BufferClose<CR>
+
+" Close tag config
+let g:closetag_filenames = '*.html,*.xhtml,*.vue'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx, *.vue'
+let g:closetag_filetypes = 'html,xhtml,vue'
+
+"
+" lua << EOF
+" require("bufferline").setup{
+" 	options = {
+" offsets = {
+"   {
+"     filetype = "NvimTree",
+"     text = "File Explorer",
+"     highlight = "Directory",
+"     text_align = "left"
+"   }
+" }
+" 	   }
+"    }
+" EOF
+
+" Tabline
+"
+"
+" not working :(
+" autocmd User NvimTreeOpen lua require'bufferline.state'.set_offset(30, 'FileTree')
+" autocmd User NvimTreeClose lua require'bufferline.state'.set_offset(0) 
+" autocmd User NvimTreeToggle lua require'bufferline.state'.set_offset(30) 
+

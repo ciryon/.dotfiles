@@ -4,10 +4,12 @@
     "javascriptreact",
     "json",
     "javascriptvue",
+    "vue",
     "typescript.tsx"
   ],
   "eslint.filetypes": ["javascript", "javascriptvue"],
   "coc.preferences.diagnostic.virtualText": true,
   "javascript.suggestionActions.enabled": false,
-  "json.suggestionActions.enabled": false
+  "json.suggestionActions.enabled": false,
+  "prettier.disableLanguages": []
 }

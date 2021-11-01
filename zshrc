@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 
 include () {
     [[ -f "$1" ]] && source "$1"
@@ -7,7 +14,8 @@ include () {
 export ZSH="/Users/ciryon/.oh-my-zsh"
 # ZSH_THEME="agnoster" # fancy
 # ZSH_THEME="amuse" # fancy
-ZSH_THEME="fox"
+# ZSH_THEME="fox" # previous one
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -31,7 +39,7 @@ plugins=(
 # Plugin settings
 ZSH_DOTENV_FILE=.envrc
 ZSH_DOTENV_PROMPT=false
-SHOW_AWS_PROMPT=false
+SHOW_AWS_PROMPT=true
 
 include $ZSH/oh-my-zsh.sh
 
@@ -79,6 +87,8 @@ alias logs='echo "Tailing ${PWD##*/}-${ENVIRONMENT}"; aws logs tail --format sho
 alias lg=lazygit
 alias vim=nvim
 alias s='iterm "cd $PWD; vim ."; yarn run dev'
+alias top=htop # custom top variant https://htop.dev/
+alias man=tldr # custom man pages 
 
 # Pager with nice colors
 export PAGER="most"
@@ -103,10 +113,14 @@ else
   alias pu='cd ~/Coding/PulsSolutions && asp puls-dev && echo Puls'
   alias cat='bat --paging=never --style "changes,rule,snip"'
   # And a Fortune!
-  echo ""
-  tput setaf 1; fortune -s aynrand
-  echo ""
-  echo ""
+  # echo ""
+  # tput setaf 1; fortune -s aynrand
+  # echo ""
+  # echo ""
 fi
 
 include ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
