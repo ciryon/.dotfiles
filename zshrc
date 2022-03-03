@@ -81,12 +81,13 @@ alias aws-profile="asp"
 alias aws="aws-wrapper"
 alias chrome="open -a \"Google Chrome\""
 # alias atom="echo 'You did mean code right?'; code"
-alias code="echo 'You did vim code right? Otherwise run /usr/local/bin/code'; vim"
+# alias code="echo 'You did vim code right? Otherwise run /usr/local/bin/code'; vim"
 alias prod="node ./scripts/deploy_site.js www puls-solutions.com appen sv dryRun; echo 'config is for prod now' "
 alias logs='echo "Tailing ${PWD##*/}-${ENVIRONMENT}"; aws logs tail --format short --follow  "/aws/lambda/${PWD##*/}-${ENVIRONMENT}"'
 alias lg=lazygit
 alias vim=nvim
-alias s='iterm "cd $PWD; vim ."; yarn run dev'
+alias s="/usr/local/bin/code .; yarn run dev"
+# alias s='iterm "cd $PWD; vim ."; yarn run dev'
 alias top=htop # custom top variant https://htop.dev/
 alias man=tldr # custom man pages 
 

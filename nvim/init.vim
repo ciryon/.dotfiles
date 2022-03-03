@@ -68,11 +68,11 @@ if (has("termguicolors"))
  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
  set termguicolors
 endif
-"colorscheme abyss
+colorscheme abyss
 " colorscheme dracula
 " colorscheme onehalfdark
 let g:sonokai_style = 'maia'
-colorscheme onehalfdark
+"colorscheme onehalfdark
 
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
