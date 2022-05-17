@@ -92,6 +92,7 @@ alias s="/usr/local/bin/code .; yarn run dev"
 # alias s='iterm "cd $PWD; vim ."; yarn run dev'
 alias top=htop # custom top variant https://htop.dev/
 alias man=tldr # custom man pages 
+alias pino-pretty='pino-pretty -t "SYS:yyyy-mm-dd HH:MM:ss"'
 
 # Pager with nice colors
 export PAGER="most"
