@@ -159,10 +159,14 @@ inoremap <A-Down> <Esc>:m+<CR>
 
 nnoremap <Leader>n :NvimTreeToggle<CR>
 nnoremap <Leader>j :NvimTreeFindFile<CR>
-let g:nvim_tree_hide_dotfiles = 1
-let g:nvim_tree_ignore = [ 'node_modules' ]
-let g:nvim_tree_auto_open = 1
+" let g:nvim_tree_hide_dotfiles = 1
+" let g:nvim_tree_ignore = [ 'node_modules' ]
+" let g:nvim_tree_auto_open = 1
 
+lua <<EOF
+require'nvim-tree'.setup {
+}
+EOF
 
 " Integrated terminal
 " open new split panes to right and below
