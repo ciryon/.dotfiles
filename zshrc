@@ -73,7 +73,7 @@ alias is='cd ~/Coding/Istari && asp istari && echo Istari'
 alias t='tmux'
 alias yesterday='~/Coding/misc_scripts/yesterday.rb'
 alias grep='grep --color=auto'
-alias serve='python -m SimpleHTTPServer 8000'
+alias serve='python3 -m http.server'
 alias r='rails'
 alias subs='echo "Recursively updating Git submodules..."; git submodule update --init --recursive'
 alias pico=vim
@@ -88,11 +88,12 @@ alias prod="node ./scripts/deploy_site.js www puls-solutions.com appen sv dryRun
 # instead get logs from shell script
 alias lg=lazygit
 alias vim=nvim
-alias s="/usr/local/bin/code .; yarn run dev"
+alias s="code .; yarn run dev"
 # alias s='iterm "cd $PWD; vim ."; yarn run dev'
 alias top=htop # custom top variant https://htop.dev/
 alias man=tldr # custom man pages 
-alias pino-pretty='pino-pretty -t "SYS:yyyy-mm-dd HH:MM:ss"'
+alias pino-pretty='pino-pretty -i hostname,pid -S -t "SYS:yyyy-mm-dd HH:MM:ss"' # hide hostname,pid + single line + timestamp 
+alias logs=puls_aws_logs
 
 # Pager with nice colors
 export PAGER="most"
@@ -106,8 +107,13 @@ SECRETS=~/.secrets && test -f $SECRETS && source $SECRETS
 
 include ~/.rvm/scripts/rvm
 
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH=/usr/local/bin:/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$HOME/dev/flutter/.pub-cache/bin:$HOME/dev/flutter/bin:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/opt/metasploit-framework/bin
+export PATH=/usr/local/bin:/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$RUBY_GEM_BIN:~/bin:$HOME/Coding/misc_scripts:$HOME/Coding/Istari/AWS/scripts:$HOME/dev/flutter/.pub-cache/bin:$HOME/dev/flutter/bin:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:/opt/metasploit-framework/bin:$HOME/Coding/PulsSolutions/scripts/bin
 
 if [[ -n $AWS_EXECUTION_ENV ]]; then
   # AWS CloudConsole
@@ -115,7 +121,7 @@ if [[ -n $AWS_EXECUTION_ENV ]]; then
 else
   # Local environment
   alias pu='cd ~/Coding/PulsSolutions && asp puls-dev && echo Puls'
-  alias cat='bat --paging=never --style "changes,rule,snip"'
+  alias cat='bat --paging=never --style "changes,rule,snip" --theme  "Monokai Extended"'
   # And a Fortune!
   # echo ""
   # tput setaf 1; fortune -s aynrand

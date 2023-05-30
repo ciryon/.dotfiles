@@ -68,10 +68,11 @@ if (has("termguicolors"))
  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
  set termguicolors
 endif
-colorscheme abyss
+color slate
+" colorscheme abyss
 " colorscheme dracula
 " colorscheme onehalfdark
-let g:sonokai_style = 'maia'
+" let g:sonokai_style = 'maia'
 "colorscheme onehalfdark
 
 " Prettier
